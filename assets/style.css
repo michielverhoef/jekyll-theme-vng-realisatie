@@ -141,3 +141,6 @@ em {
 .hljs-attr {
     color: #fff;
 }
+code > span {
+    color: #fff;
+}
