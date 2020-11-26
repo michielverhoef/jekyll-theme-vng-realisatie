@@ -6,7 +6,7 @@ body {
     color: #424242;
     line-height: 1rem;
 }
-hljs-attr {
+.hljs-attr {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     line-height: 1rem;
