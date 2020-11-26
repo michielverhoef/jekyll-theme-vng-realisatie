@@ -6,6 +6,11 @@ body {
     color: #424242;
     line-height: 1rem;
 }
+hljs-attr {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    line-height: 1rem;
+}
 h1 {
     font-size: 2rem;
     font-weight: 600;
