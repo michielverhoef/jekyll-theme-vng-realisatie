@@ -6,11 +6,6 @@ body {
     color: #424242;
     line-height: 1rem;
 }
-.hljs-attr {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    line-height: 1rem;
-}
 h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -130,7 +125,6 @@ em {
 .no-border {
     border: 0;
 }
-
 .vng-logo {
     display: inline-block;
     width: 89px;
@@ -139,9 +133,11 @@ em {
     background-size: 100% auto;
     text-indent: -9999px;
 }
-  
-  .doel {
-      padding-bottom: 1rem;
-      margin-bottom: 0rem;
-      color: white;
-  }
+.doel {
+    padding-bottom: 1rem;
+    margin-bottom: 0rem;
+    color: white;
+}
+.hljs-attr {
+    color: #fff;
+}
