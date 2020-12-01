@@ -17,6 +17,42 @@ jobs:
         https://api.github.com/repos/vng-realisatie/haal-centraal/pages/builds
       env:
         USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-bag-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-bag-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brk-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brk-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brk-historie-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brk-historie-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brk-event-sourcing
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brk-event-sourcing/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
     - name: rebuild vng-realisatie/haal-centraal-brp-bevragen
       run: |
         curl \
@@ -24,5 +60,86 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/haal-centraal-brp-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brp-historie-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brp-historie-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brp-bewoning
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brp-bewoning/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-reisdocumenten-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-reisdocumenten-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brp-tabellen-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brp-tabellen-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brp-update-api
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brp-update-api/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-hr-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-hr-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-woz-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-woz-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-bgt-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-bgt-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-web-security
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-web-security/pages/builds
       env:
         USER_TOKEN: ${{ secrets.USER_TOKEN }}
