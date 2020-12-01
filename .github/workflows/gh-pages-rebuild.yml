@@ -1,0 +1,28 @@
+name: Trigger GitHub Pages rebuild at remote repos
+
+on:
+  workflow_dispatch:
+
+jobs:
+  GitHub-Pages-Rebuild:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: rebuild vng-realisatie/haal-centraal
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+    - name: rebuild vng-realisatie/haal-centraal-brp-bevragen
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/haal-centraal-brp-bevragen/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
