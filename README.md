@@ -142,6 +142,13 @@ remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
 
 Het '\_config.yml' bestand speelt een centrale rol bij toepassen van dit theme, in het vervolg van deze uitleg komen we daar dus nog vaker op terug.
 
+### Content
+
+De content van de Haal Centraal GitHub Pages site bestaat uit markdown bestanden die in de 'docs' folder of lager staan. Elke repository die aansluit bij de Haal Centraal GitHub Pages site heeft enkele markdown bestanden die vast voorkomen. Ik benoem ze hieronder:
+
+| index.md | Bevat de hoofdpagina van de betreffende API standaard. In het algemeen is de content nagenoeg gelijk aan die van het 'README.md' bestand. |
+
+
 ## Geautomatiseerde rebuild
 
 Zodra er in een repository die dit theme gebruikt een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder wordt er automatisch een rebuild uitgevoerd van de deployment. Als er echter een wijziging wordt aangebracht in dit theme dan wordt die wijziging ook pas zichtbaar in de GitHub pages van een repo als er in die repo een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder. Vaak willen we echter dat die wijziging direct wordt doorgevoerd op de GitHub pages van alle repo's die dit theme gebruiken.
