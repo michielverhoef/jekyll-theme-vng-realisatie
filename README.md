@@ -11,7 +11,7 @@ Centraal staan daarbij de bestanden in de folders:
 
 Hieronder lichten we de folders en zo nodig de bestanden daarin toe.
 
-### _layouts
+### \_layouts
 
 Deze folder bevat de layouts (of templates) voor de 4 type pagina's die we met dit theme genereren. Layouts werken volgens het volgende principe.
 
@@ -196,8 +196,54 @@ De 'url' property wordt gebruikt om een link te genereren naar een externe bron.
 
 De 'target' property kan tenslotte gebruikt worden om er voor te zorgen dat het klikken op een link leidt tot het openen van een nieuw browser tabblad waarin de bron geöpende wordt. De waarde van de 'target' property moet dan 'blank' zijn.
 
+### Bestanden met een gebruiksaanwijzing
 
-**Deze paragraaf is nog in bewerking**
+Enkele van de standaard bestanden hebben een gebruiksaanwijzing. Het gaat daarbij met name om de bestanden 'redoc.md' en 'swagger-ui.md'. Beide bestanden hebben slechts een minimale content maar wel enkele variabele in de header die de andere bestanden niet hebben.
+
+#### redoc.md
+
+De content van dit bestand bestaat uit niet meer dan:
+
+```
+<redoc spec-url='{{ page.spec-url}}'></redoc>
+```
+
+'page.spec-url' verwijst naar de variabele 'spec-url' die in de header van dit bestand is gedefinieerd. Het bevat de link naar de raw genereervariant van de openapi.yaml (de openapi specificatie). 
+Na resolving wordt de 'content' van deze pagina gevormd door 
+
+```
+<redoc spec-url='https://raw.githubusercontent.com/VNG-Realisatie/Web-Security/master/specificatie/genereervariant/openapi.yaml'></redoc>
+```
+
+dit wordt dus via de in dit bestand gedefinieerde layout (page-with-side-nav) ingelezen in de default layout. 
+De default layout bevat tevens de code
+
+```
+   {% if page.body_include %}
+      {% include {{ page.body_include }} %}
+    {% endif %}
+```
+
+Code die dus alleen actief wordt als de variabele 'body_include' gedefinieerd is wat van toepassing is op het bestand 'redoc.md'. Daar is deze variabele te vinden in de header met de waarde 'redoc-body.html'. Daarmee wordt de content van het bestand 'redoc-body.html', wat te vinden is in de onderliggende repository, in de '\_includes' folder, op de betreffende plaats ge-include in de default layout.
+
+#### swagger-ui.md
+
+De verwerking van dit bestand werkt ongeveer hetzelfde als het voorgaande. De content bestaat uit niet meer dan
+
+```
+<div id="swagger-ui"></div>
+```
+
+Ditmaal 3 variabelen die in de header zijn gedefinieerd 'head_include', 'body_include' en 'openapi-url'. De verwerking van de variabele 'body_include' werkt nu weer hetzelfde als bij het redoc.md bestand alleen wordt nu naar een gehel ander bestand verwezen, te weten 'swagger-ui-body.html'. Dit kan wederom gevonden worden in de '\_include' folder. In 'swagger-ui-body.html' wordt gebruik gemaakt van de variabele 'openapi-url' die bestaat uit de link naar de raw genereervariant van de openapi.yaml (de openapi specificatie).
+De default layout bevat tenslotte nog de code
+
+```
+    {% if page.head_include %}
+      {% include {{ page.head_include }} %}
+    {% endif %}
+```
+
+Nu dus code die alleen actief wordt als de variabele 'head_include' gedefinieerd is wat van toepassing is op het bestand 'swagger-ui.md'. Daarmee wordt de content van het bestand 'swagger-ui-head.html', wat te vinden is in de onderliggende repository in de '\_includes' folder, op de betreffende plaats ge-include in de default layout.
 
 ## Geautomatiseerde handelingen
 
