@@ -144,10 +144,22 @@ Het '\_config.yml' bestand speelt een centrale rol bij toepassen van dit theme, 
 
 ### Content
 
-De content van de Haal Centraal GitHub Pages site bestaat uit markdown bestanden die in de 'docs' folder of lager staan. Elke repository die aansluit bij de Haal Centraal GitHub Pages site heeft enkele markdown bestanden die vast voorkomen. Ik benoem ze hieronder:
+De content van de Haal Centraal GitHub Pages site bestaat uit markdown bestanden die in de 'docs' folder of lager staan. Elke repository die aansluit bij de Haal Centraal GitHub Pages site heeft enkele standaard markdown bestanden die overigens niet altijd voor hoeven te komen. Ik benoem ze hieronder:
 
+| Bestand | Omschrijving |
+| --- | --- |
 | index.md | Bevat de hoofdpagina van de betreffende API standaard. In het algemeen is de content nagenoeg gelijk aan die van het 'README.md' bestand. |
+| goals-canvas.md | Bevat een beschrijving van de epics. Er wordt beschreven wat de API wil bereiken, hoe het dat bereikt, wat daarvoor de input en output is en met welk doel. Tevens zijn referenties naar de gerelateerde userstories opgenomen. |
+| getting-started.md | Beschrijft welke stappen moeten worden doorlopen om aan te sluiten. |
+| redoc.md | Bevat gegevens om de gerelateerde API specificatie in de Redoc interface te tonen. |
+| swagger-ui.md | Bevat gegevens om de gerelateerde API specificatie in de Swagger interface te tonen. |
+| user-stories-prod.md |  |
+| user-stories-dev |  |
+| features.md |  |
 
+
+
+**Deze paragraaf is nog in bewerking**
 
 ## Geautomatiseerde rebuild
 
