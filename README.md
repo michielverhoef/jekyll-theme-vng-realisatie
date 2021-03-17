@@ -125,7 +125,7 @@ Op alle items van de variabele 'nav' (dus eigenlijk alle 'subnav' elementen) wor
 
 #### De top navigatie
 
-Ten opzichte van de side-navigatie is de top navigatie redelijk straight forward. Het bevat html code welke kan worden aangepast als er iets wijzigt in m.b.t. de standaarden of waaraan content kan worden toegevoegd als er nieuwe standaarden aan het lijstje met producten moet worden toegevoegd. Dit doe je in het bestand ' topnavigatie.html' .
+Ten opzichte van de side-navigatie is de top navigatie redelijk straight forward. Het bevat html code welke kan worden aangepast als er iets wijzigt in m.b.t. de standaarden of waaraan content kan worden toegevoegd als er nieuwe standaarden aan het lijstje met producten moet worden toegevoegd. Dit doe je in het bestand ' topnavigatie.html'.
 
 ### assets
 
@@ -157,6 +157,44 @@ De content van de Haal Centraal GitHub Pages site bestaat uit markdown bestanden
 | user-stories-dev.md | Gegenereerd bestand met een lijst van alle GitHub userstories die aan de in ontwikkeling versie van de standaard API zijn gekoppeld en de daarbij horende links naar de betreffende userstories in de gerelateerde GitHub repository. |
 | features.md | Lijst met links naar Feature bestanden in de gerelateerde GitHub repository.  |
 
+Naast deze bestanden kunnen er natuurlijk nog andere bestanden aan de content van de site toegevoegd kunnen worden. Het opnemen van pagina's in de content structuur kan natuurlijk door er in de markdown bestanden links naartoe op te nemen je kunt ze echter ook opnemen in de side navigatie. Hoe dat werkt en hoe bovenstaande documenten daarin zijn opgenomen lees je in de volgende paragraaf.
+
+### Configuratie side navigatie
+
+De configuratie van de side navigatie gebeurd in het '\_config.yml' bestand in de 'nav' property. 
+Die property kan bestaan uit 1 of meer secties.
+Elke sectie bestaat uit een 'title' en een 'subnav' property. Elke 'subnav' property bevat vervolgens weer 1 of meer subsecties.
+Tenslotte bestaat elke subsectie weer uit een 'title' gevolgd door een 'url' of 'path' property gevolgd door een optionele 'target' property. Op deze wijze kun je de volgende structuur creëren:
+
+```
+nav:
+  - title: BRP Bevragen
+    subnav:
+      - title: Main
+        path: /
+      - title: Goals canvas
+        path: /goals-canvas
+  - title: Specificaties v. 1.0 (Live)
+    subnav:
+      - title: Getting started
+        path: /getting-started
+      - title: User stories
+        path: /user-stories-prod
+      - title: User stories (afgeschermd)
+        url: https://gitlab.com/vng-realisatie/haal-centraal-brp-afgeschermd/-/issues?label_name%5B%5D=BRP+bevragen
+	target: blank
+  - title: Specificaties v. 1.1 (IO)
+    subnav:
+      - title: User stories
+        path: /user-stories-dev
+```
+
+Met de 'title' properties regel je wat men uiteindelijk in de side naviatie te zien krijgt. De titles in de secties dienen slechts ter ordening maar van de titles in de subsecties kunnen links gemaakt worden. Dat kan door daar een 'path' of een 'url' property aan toe te voegen. Met de 'target' property kan vervolgens het gedrag van de link worden aangepast.
+
+Een 'path' property bevat altijd de naam van een bestand in de 'docs' folder van de repository. Is het een markdown bestand dan wordt daarvan de extensie '.md' weggelaten. Staat het bestand in een subfolder van de 'docs' folder dan dient dat path ook aan de bestandsnaam toegevoegd te worden.
+De 'url' property wordt gebruikt om een link te genereren naar een externe bron. In het bovenstaande voorbeeld is dat bijvoorbeeld gebruikt om te linken naar een lijst met userstories die in een GitLab repository staan.
+
+De 'target' property kan tenslotte gebruikt worden om er voor te zorgen dat het klikken op een link leidt tot het openen van een nieuw browser tabblad waarin de bron geöpende wordt. De waarde van de 'target' property moet dan 'blank' zijn.
 
 
 **Deze paragraaf is nog in bewerking**
