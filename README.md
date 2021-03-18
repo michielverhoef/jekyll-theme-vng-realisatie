@@ -200,7 +200,7 @@ De 'target' property kan tenslotte gebruikt worden om er voor te zorgen dat het 
 
 Enkele van de standaard bestanden hebben een gebruiksaanwijzing. Het gaat daarbij met name om de bestanden 'redoc.md' en 'swagger-ui.md'. Beide bestanden hebben slechts een minimale content maar wel enkele variabele in de header die de andere bestanden niet hebben.
 
-**Let op!** Een deel van de content van dez bestanden is alleen zichtbaar in 'raw' en 'edit' mode.
+**Let op!** Een deel van de content van deze bestanden is alleen zichtbaar in 'raw' en 'edit' mode.
 
 #### redoc.md
 
