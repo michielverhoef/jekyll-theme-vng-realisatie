@@ -134,7 +134,7 @@ Hierop gaan we in dit document niet verder in.
 
 ## Hoe maken repo's gebruik van dit theme
 
-Om een repo van dit theme gebruik te laten maken moet als eerste in de GitHub Pages sectie van de Settings aangegeven worden welke branch en folder als bron voor de GitHub Pages moet worden beschouwd. Meer hoeft niet te worden aangegeven. Binnen Haal Centraal gebruiken wij in principe altijd de 'docs' folder van de 'master/main' branch. Aan het bestand '\_config.yml' dat daarop in die folder wordt aangemaakt moet de volgende regel toegevpoegd worden om de repo het onderliggende theme te laten gebruiken:
+Om een repo van dit theme gebruik te laten maken moet als eerste in de GitHub Pages sectie van de Settings aangegeven worden welke branch en folder als bron voor de GitHub Pages moet worden beschouwd. Meer hoeft niet te worden aangegeven. Binnen Haal Centraal gebruiken wij in principe altijd de 'docs' folder van de 'master/main' branch. Aan het bestand '\_config.yml' dat daarop in die folder wordt aangemaakt moet de volgende regel toegevoegd worden om de repo het onderliggende theme te laten gebruiken:
 
 ```
 remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
