@@ -251,11 +251,12 @@ Nu dus code die alleen actief wordt als de variabele 'head_include' gedefinieerd
 
 ### Rebuild
 
-Zodra er in een repository, die dit theme gebruikt, een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder wordt er automatisch een rebuild uitgevoerd van de deployment waardoor wijzigingen redelijk snel zichtbaar worden. Echter als er een wijziging wordt aangebracht in de onderliggende GitHub repository (en dus in dit theme) dan wordt die wijziging pas zichtbaar in de GitHub pages van een repository als er in die repsitory een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder. 
+Zodra er in een repository, die dit theme gebruikt, een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder wordt er automatisch een rebuild uitgevoerd van de deployment waardoor de wijzigingen redelijk snel zichtbaar worden in de GitHub Pages site behorende bij die repository. Echter als er een wijziging wordt aangebracht in dit theme (de jekyll-theme-haal-centraal repository) dan wordt die wijziging pas zichtbaar in de GitHub pages van een repository als er in die repsitory een wijziging wordt aangebracht in een bestand in de basis GitHub Pages folder. 
 
 Dat laatste is meestal ongewenst. Vaak willen we nl. dat die wijziging direct wordt doorgevoerd op de GitHub pages van alle repositories die dit theme gebruiken.
-Het zou dan erg omslachtig en ongewenst zijn om in elke repository dan maar even een hele kleine wijziging door te voeren om daarmee de rebuild te triggeren.
-Daarom is een action (script) gedefinieerd waarmee we een rebuild op al deze repositories afdwingen. Het script kun je in de onderliggende repository vinden in '.github/workflows/gh-pages-rebuild.yml' en kan afgetrapt worden in de 'Actions' tab van deze repository.
+Het zou dan erg omslachtig en ongewenst zijn om in elke repository dan een hele kleine wijziging door te voeren om daarmee de rebuild te triggeren.
+Daarom is binnen de de jekyll-theme-haal-centraal repository een action (script) gedefinieerd waarmee we een rebuild op al deze repositories afdwingen. Het script kun je in de onderliggende repository vinden in '.github/workflows/gh-pages-rebuild.yml' en kan afgetrapt worden in de 'Actions' tab van deze repository.
+Dit script maakt gebruik van een organization secret (token) waarmee dit script toegang wordt verleend tot de respositories waarop een rebuild moet worden uitgevoerd.
 
 **Let op!** Zodra een nieuwe repository dit theme gebruikt moet het worden toegevoegd aan dit script.
 
