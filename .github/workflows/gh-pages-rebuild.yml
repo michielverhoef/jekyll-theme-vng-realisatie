@@ -16,7 +16,7 @@ jobs:
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/haal-centraal/pages/builds
       env:
-        USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
     - name: rebuild vng-realisatie/haal-centraal-bag-bevragen
       run: |
         curl \
@@ -25,7 +25,7 @@ jobs:
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/haal-centraal-bag-bevragen/pages/builds
       env:
-        USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
     - name: rebuild vng-realisatie/haal-centraal-brk-bevragen
       run: |
         curl \
