@@ -1,4 +1,4 @@
-# jekyll-theme-haal-centraal
+# jekyll-theme-vng-realisatie
 
 Dit theme wordt gebruikt voor het deployen van de documentatie in de Haal Centraal repositories naar GitHub Pages.
 
