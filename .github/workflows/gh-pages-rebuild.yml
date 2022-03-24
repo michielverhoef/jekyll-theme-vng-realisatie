@@ -27,3 +27,13 @@ jobs:
         https://api.github.com/repos/vng-realisatie/IMWOZ-bevragingen/pages/builds
       env:
         USER_TOKEN: ${{ secrets.USER_TOKEN }}
+
+    - name: rebuild vng-realisatie/IAM
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/IAM/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
