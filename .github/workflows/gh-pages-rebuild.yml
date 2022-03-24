@@ -16,7 +16,7 @@ jobs:
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/Regels-bij-activiteiten/pages/builds
       env:
-        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+        USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: rebuild vng-realisatie/IMWOZ-bevragingen
       run: |
@@ -26,7 +26,7 @@ jobs:
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/IMWOZ-bevragingen/pages/builds
       env:
-        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+        USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: rebuild vng-realisatie/IAM
       run: |
@@ -36,4 +36,4 @@ jobs:
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/IAM/pages/builds
       env:
-        USER_TOKEN: ${{ secrets.USER_TOKEN }}
+        USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
