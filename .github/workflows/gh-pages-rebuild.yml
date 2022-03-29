@@ -37,3 +37,13 @@ jobs:
         https://api.github.com/repos/vng-realisatie/IAM/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNGR_USER_TOKEN }}
+
+    - name: rebuild vng-realisatie/ODS-Open-Raadsinformatie
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/ODS-Open-Raadsinformatie/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNGR_USER_TOKEN }}
