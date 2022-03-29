@@ -48,7 +48,7 @@ jobs:
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
-   - name: rebuild vng-realisatie/API-Kennisbank
+    - name: rebuild vng-realisatie/API-Kennisbank
       run: |
         curl \
         -X POST \
@@ -58,7 +58,7 @@ jobs:
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
-   - name: rebuild vng-realisatie/gemma-verwerkingenlogging
+    - name: rebuild vng-realisatie/gemma-verwerkingenlogging
       run: |
         curl \
         -X POST \
