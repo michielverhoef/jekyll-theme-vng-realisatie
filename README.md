@@ -1,6 +1,6 @@
 # jekyll-theme-vng-realisatie
 
-Dit theme wordt gebruikt voor het deployen van de documentatie in de Haal Centraal repositories naar GitHub Pages.
+Dit theme wordt gebruikt voor het deployen van de documentatie in VNG Realisatie repositories naar GitHub Pages.
 
 ## Generatie logica
 
@@ -46,14 +46,16 @@ geregeld dat als in een md bestand in de header een variabele 'head_include' is 
 
 #### default.html
 
-Deze layout bevat de basis indeling van de Haal Centraal pagina's. Naast de variabele ``content`` worden hierin ook de variabelen ``head_include`` en ``body_include`` gebruikt. 
+Deze layout bevat de basis indeling van de VNG Realisatie pagina's. Naast de variabele ``content`` worden hierin ook de variabelen ``head_include`` en ``body_include`` gebruikt. 
 
 Indien er voor een md  bestand in de basis GitHub Pages folder (afhankelijk van de gekozen instelling de 'docs' folder, de 'root' folder of een specifieke branch) geen layout is gedefinieerd wordt automatisch deze layout toegekend.
 Duidelijker is echter het gebruik af te dwingen door in de header de vermeldde code op te nemen.
 
 #### landing-page.html
 
-Deze layout wordt alleen gebruikt door het 'index.md' bestand in de repository 'Haal-Centraal' (de landingspagina). Het bevat slechts een 'div' element dat dus aan de default layout wordt toegevoegd. Om deze layout te kunnen gebruiken wordt de code:
+Deze layout wordt nog niet gebruikt in een 'index.md' bestand van een van de VNG Realisatie repositories (de landingspagina). 
+Er is immers nog geen portaal pagina voor de VNG Realisatie repositories.
+Het bevat slechts een 'div' element dat dus aan de default layout wordt toegevoegd. Om deze layout te kunnen gebruiken wordt de code:
 ```
 ---
 layout: landing-page
@@ -63,7 +65,7 @@ in het md bestand gebruikt.
 
 #### page-with-side-nav.html
 
-Deze layout wordt door de meeste pagina's in de Haal Centraal site gebruikt. Naast een content deel bevat het ook een side navigatie. Ook dit bevat slechts een 'div' element waarmee het content deel van de pagina's en de side navigatie wordt gedefinieerd. Gebruik
+Deze layout wordt door de meeste pagina's in de VNG Realisatie site gebruikt. Naast een content deel bevat het ook een side navigatie. Ook dit bevat slechts een 'div' element waarmee het content deel van de pagina's en de side navigatie wordt gedefinieerd. Gebruik
 ```
 ---
 layout: page-with-side-nav
@@ -134,17 +136,17 @@ Hierop gaan we in dit document niet verder in.
 
 ## Hoe maken repo's gebruik van dit theme
 
-Om een repo van dit theme gebruik te laten maken moet als eerste in de GitHub Pages sectie van de Settings aangegeven worden welke branch en folder als bron voor de GitHub Pages moet worden beschouwd. Meer hoeft niet te worden aangegeven. Binnen Haal Centraal gebruiken wij in principe altijd de 'docs' folder van de 'master/main' branch. Aan het bestand '\_config.yml' dat daarop in die folder wordt aangemaakt moet de volgende regel toegevoegd worden om de repo het onderliggende theme te laten gebruiken:
+Om een repo van dit theme gebruik te laten maken moet als eerste in de GitHub Pages sectie van de Settings aangegeven worden welke branch en folder als bron voor de GitHub Pages moet worden beschouwd. Meer hoeft niet te worden aangegeven. Binnen VNG Realisatie gebruiken wij in principe altijd de 'docs' folder van de 'master/main' branch. Aan het bestand '\_config.yml' dat daarop in die folder wordt aangemaakt moet de volgende regel toegevoegd worden om de repo het onderliggende theme te laten gebruiken:
 
 ```
-remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
+remote_theme: VNG-Realisatie/jekyll-theme-vng-realisatie
 ```
 
 Het '\_config.yml' bestand speelt een centrale rol bij toepassen van dit theme, in het vervolg van deze uitleg komen we daar dus nog vaker op terug.
 
 ### Content
 
-De content van de Haal Centraal GitHub Pages site bestaat uit markdown bestanden die in de 'docs' folder of lager staan. Elke repository die aansluit bij de Haal Centraal GitHub Pages site heeft enkele standaard markdown bestanden die overigens niet altijd voor hoeven te komen. Ik benoem ze hieronder:
+De content van de VNG Realisatie GitHub Pages site bestaat uit markdown bestanden die in de 'docs' folder of lager staan. Elke repository die aansluit bij de VNG Realisatie GitHub Pages site heeft enkele standaard markdown bestanden die overigens niet altijd voor hoeven te komen. Ik benoem ze hieronder:
 
 | Bestand | Omschrijving |
 | --- | --- |
@@ -262,7 +264,7 @@ Dit script maakt gebruik van een organization secret (token) waarmee dit script 
 
 ### Generate-user-stories
 
-De pagina van een Haal Centraal API standaard kan maximaal 2 versies van de standaard bevatten, de versie die in produktie is en de versie die in ontwikkeling is.
+De pagina van een VNG Realisatie API standaard kan maximaal 2 versies van de standaard bevatten, de versie die in produktie is en de versie die in ontwikkeling is.
 Natuurlijk kunnen deze bestanden handmatig vervaardigd worden maar dat kost ten eerste erg veel tijd en is ten tweede erg foutgevoelig. Om die reden wordt in elke repository die het onderliggende theme gebruikt het script 'generate-user-stories' geplaatst (in de folder '.github/workflows/'). Het script genereert zo gewenst (afhankelijk van welke versie getoond moet worden) een lijst met userstories die geïmplementeerd zijn in de produktie versie en een lijst met userstories die gepland staan voor implementatie in de in ontwikkeling versie.
 Aangezien elke repository een andere status kan hebben en dus een andere produktie en in ontwikkeling versie moet het script aangepast worden aan de status van de repository.
 Ook gedurende de tijd moet dit script onderhouden worden. Als in een repository de produktie versie 1.2.0 versie 1.1.0 gaat vervangen en versie 1.3.0 in ontwikkeling gaat heeft dat dus gevolgen voor het script. Het voert te ver om hier over de werking van het script uit te wijden dus daarvoor verwijs ik naar [de uitleg van het script in de API Kennisbank](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/GitHub%20Actions/haal-centraal.md).
