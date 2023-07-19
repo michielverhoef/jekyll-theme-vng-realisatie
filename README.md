@@ -257,14 +257,16 @@ Zodra er in een repository, die dit theme gebruikt, een wijziging wordt aangebra
 
 Dat laatste is meestal ongewenst. Vaak willen we nl. dat die wijziging direct wordt doorgevoerd op de GitHub pages van alle repositories die dit theme gebruiken.
 Het zou dan erg omslachtig en ongewenst zijn om in elke repository dan een hele kleine wijziging door te voeren om daarmee de rebuild te triggeren.
-Daarom is binnen de de jekyll-theme-haal-centraal repository een action (script) gedefinieerd waarmee we een rebuild op al deze repositories afdwingen. Het script kun je in de onderliggende repository vinden in '.github/workflows/gh-pages-rebuild.yml' en kan afgetrapt worden in de 'Actions' tab van deze repository.
+Daarom is binnen de onderliggende repository een action (script) gedefinieerd waarmee we een rebuild op al deze repositories afdwingen. Het script kun je in de onderliggende repository vinden in '.github/workflows/gh-pages-rebuild.yml' en kan afgetrapt worden in de 'Actions' tab van deze repository.
 Dit script maakt gebruik van een organization secret (token) waarmee dit script toegang wordt verleend tot de respositories waarop een rebuild moet worden uitgevoerd.
 
 **Let op!** Zodra een nieuwe repository dit theme gebruikt moet het worden toegevoegd aan dit script.
+
+<!-- Onderstaande is volgens mij op onderliggende repository niet van toepassing.
 
 ### Generate-user-stories
 
 De pagina van een VNG Realisatie API standaard kan maximaal 2 versies van de standaard bevatten, de versie die in produktie is en de versie die in ontwikkeling is.
 Natuurlijk kunnen deze bestanden handmatig vervaardigd worden maar dat kost ten eerste erg veel tijd en is ten tweede erg foutgevoelig. Om die reden wordt in elke repository die het onderliggende theme gebruikt het script 'generate-user-stories' geplaatst (in de folder '.github/workflows/'). Het script genereert zo gewenst (afhankelijk van welke versie getoond moet worden) een lijst met userstories die geïmplementeerd zijn in de produktie versie en een lijst met userstories die gepland staan voor implementatie in de in ontwikkeling versie.
 Aangezien elke repository een andere status kan hebben en dus een andere produktie en in ontwikkeling versie moet het script aangepast worden aan de status van de repository.
-Ook gedurende de tijd moet dit script onderhouden worden. Als in een repository de produktie versie 1.2.0 versie 1.1.0 gaat vervangen en versie 1.3.0 in ontwikkeling gaat heeft dat dus gevolgen voor het script. Het voert te ver om hier over de werking van het script uit te wijden dus daarvoor verwijs ik naar [de uitleg van het script in de API Kennisbank](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/GitHub%20Actions/haal-centraal.md).
+Ook gedurende de tijd moet dit script onderhouden worden. Als in een repository de produktie versie 1.2.0 versie 1.1.0 gaat vervangen en versie 1.3.0 in ontwikkeling gaat heeft dat dus gevolgen voor het script. Het voert te ver om hier over de werking van het script uit te wijden dus daarvoor verwijs ik naar [de uitleg van het script in de API Kennisbank](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/GitHub%20Actions/haal-centraal.md).-->
