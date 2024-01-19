@@ -265,3 +265,12 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/Zaaktypecatalogus
+
+
+    - name: rebuild vng-realisatie/Standaarden
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/Standaarden
