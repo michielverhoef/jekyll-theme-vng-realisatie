@@ -265,6 +265,8 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/Zaaktypecatalogus/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
     - name: rebuild vng-realisatie/Standaarden
       run: |
@@ -273,3 +275,5 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/Standaarden/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
