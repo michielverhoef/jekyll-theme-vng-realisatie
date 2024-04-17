@@ -7,6 +7,18 @@ jobs:
   GitHub-Pages-Rebuild:
     runs-on: ubuntu-latest
 
+    - name: rebuild vng-realisatie/Standaarden
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/Standaarden/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    # API repositories
+
     steps:
     - name: rebuild vng-realisatie/Regels-bij-activiteiten
       run: |
@@ -28,16 +40,6 @@ jobs:
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
-    - name: rebuild vng-realisatie/RAWA
-      run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: Bearer $USER_TOKEN" \
-        https://api.github.com/repos/vng-realisatie/RAWA/pages/builds
-      env:
-        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
-
     - name: rebuild vng-realisatie/ODS-Open-Raadsinformatie
       run: |
         curl \
@@ -45,36 +47,6 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/ODS-Open-Raadsinformatie/pages/builds
-      env:
-        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
-
-    - name: rebuild vng-realisatie/API-Kennisbank
-      run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: Bearer $USER_TOKEN" \
-        https://api.github.com/repos/vng-realisatie/API-Kennisbank/pages/builds
-      env:
-        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
-
-    - name: rebuild vng-realisatie/gemma-verwerkingenlogging
-      run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: Bearer $USER_TOKEN" \
-        https://api.github.com/repos/vng-realisatie/gemma-verwerkingenlogging/pages/builds
-      env:
-        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
-
-    - name: rebuild vng-realisatie/API-Kennisbank
-      run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: Bearer $USER_TOKEN" \
-        https://api.github.com/repos/vng-realisatie/API-Kennisbank/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
@@ -87,6 +59,8 @@ jobs:
         https://api.github.com/repos/vng-realisatie/klantinteracties/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    # StUF repositories
 
     - name: rebuild vng-realisatie/StUF-onderlaag
       run: |
@@ -268,15 +242,7 @@ jobs:
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
 
-    - name: rebuild vng-realisatie/Standaarden
-      run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: Bearer $USER_TOKEN" \
-        https://api.github.com/repos/vng-realisatie/Standaarden/pages/builds
-      env:
-        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+    # Informatiemodellen
 
     - name: rebuild vng-realisatie/RGBZ
       run: |
@@ -305,5 +271,37 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: Bearer $USER_TOKEN" \
         https://api.github.com/repos/vng-realisatie/ImZTC/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    # Diversen
+
+    - name: rebuild vng-realisatie/RAWA
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/RAWA/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/gemma-verwerkingenlogging
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/gemma-verwerkingenlogging/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/API-Kennisbank
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/API-Kennisbank/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
