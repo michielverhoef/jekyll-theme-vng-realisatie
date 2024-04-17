@@ -277,3 +277,33 @@ jobs:
         https://api.github.com/repos/vng-realisatie/Standaarden/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/RGBZ
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/RGBZ/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/RSGB
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/RSGB/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/ImZTC
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/ImZTC/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
