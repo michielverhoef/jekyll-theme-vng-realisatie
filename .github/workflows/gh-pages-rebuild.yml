@@ -21,6 +21,16 @@ jobs:
 
     # API repositories
 
+    - name: rebuild vng-realisatie/gemma-zaken
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/gemma-zaken/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
     - name: rebuild vng-realisatie/Regels-bij-activiteiten
       run: |
         curl \
