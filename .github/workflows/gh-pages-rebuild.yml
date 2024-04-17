@@ -7,6 +7,8 @@ jobs:
   GitHub-Pages-Rebuild:
     runs-on: ubuntu-latest
 
+    steps:
+
     - name: rebuild vng-realisatie/Standaarden
       run: |
         curl \
@@ -19,7 +21,6 @@ jobs:
 
     # API repositories
 
-    steps:
     - name: rebuild vng-realisatie/Regels-bij-activiteiten
       run: |
         curl \
