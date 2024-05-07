@@ -7,8 +7,6 @@ plugins:
   - jekyll-algolia
   - jekyll-remote-theme
 
-# remote_theme: vng-realisatie/jekyll-haal-centraal-theme
-
 markdown: kramdown
 
 plugins:
