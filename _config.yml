@@ -1,13 +1,13 @@
-title: Jekyll Haal Centraal theme
+title: Jekyll VNG Realisatie theme
 
 description: >-
-   Jekyll version for Haal Centraal.
+   Jekyll version for VNG Realisatie
 
 plugins:
   - jekyll-algolia
   - jekyll-remote-theme
 
-remote_theme: vng-realisatie/jekyll-haal-centraal-theme
+# remote_theme: vng-realisatie/jekyll-haal-centraal-theme
 
 markdown: kramdown
 
@@ -37,4 +37,4 @@ sass:
   load_paths:
     - _sass
 
-github: VNG-Realisatie/Haal-Centraal
+github: VNG-Realisatie/jekyll-theme-vng-realisatie
