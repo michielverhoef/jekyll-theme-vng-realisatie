@@ -326,3 +326,13 @@ jobs:
         https://api.github.com/repos/vng-realisatie/Digikoppeling-Adapter-Intern/pages/builds
       env:
         USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
+
+    - name: rebuild vng-realisatie/Model-Driven-Design-Documentatie
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: Bearer $USER_TOKEN" \
+        https://api.github.com/repos/vng-realisatie/Model-Driven-Design-Documentatie/pages/builds
+      env:
+        USER_TOKEN: ${{ secrets.VNG_R_TOKEN }}
